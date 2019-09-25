@@ -58,6 +58,9 @@ this is accomplished through a series of strided two dimensional convolutional t
                
 ## Discriminator:
 Discriminator takes a 3x64x64 input image, processes it through a series of Conv2d, BatchNorm2d, and LeakyReLU layers, and outputs the final probability through a Sigmoid activation function. This architecture can be extended with more layers if necessary for the problem, but there is significance to the use of the strided convolution, BatchNorm, and LeakyReLUs. The DCGAN paper mentions it is a good practice to use strided convolution rather than pooling to downsample because it lets the network learn its own pooling function. 
+
+## Loss Functions and Optimizers:
+use the Binary Cross Entropy loss (BCELoss) function which is defined in PyTorch.we define our real label as 1 and the fake label as 0.As specified in the DCGAN paper, both are Adam optimizers with learning rate 0.0002 and Beta1 = 0.5. For keeping track of the generator’s learning progression
  
 
 
