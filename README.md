@@ -44,7 +44,18 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
                 - LeakyReLU(x)=max(0,x)+negative_slope∗min(0,x)
                 - negative_slope – Controls the angle of the negative slope. Default: 1e-2
                 - inplace – can optionally do the operation in-place. Default: False
+                
+                
+## Weight Initialization:
+- From the DCGAN paper, the authors specify that all model weights shall be randomly initialized from a Normal distribution with mean=0, stdev=0.02. The weights_init function takes an initialized model as input and reinitializes all convolutional, convolutional-transpose, and batch normalization layers to meet this criteria
 
+## Generator: 
+this is accomplished through a series of strided two dimensional convolutional transpose layers, each paired with a 2d batch norm layer and a relu activation. The output of the generator is fed through a tanh function to return it to the input data range of [−1,1],training images (i.e. 3x64x64)
+               
+               -  nz = is the length of the z input vector
+               - ngf = ngf is relates to the size of the feature maps that are propagated through the generator
+               - nc = nc is the number of channels in the output image 
+ 
 
 
                
