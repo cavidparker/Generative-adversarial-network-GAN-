@@ -61,6 +61,9 @@ Discriminator takes a 3x64x64 input image, processes it through a series of Conv
 
 ## Loss Functions and Optimizers:
 use the Binary Cross Entropy loss (BCELoss) function which is defined in PyTorch.we define our real label as 1 and the fake label as 0.As specified in the DCGAN paper, both are Adam optimizers with learning rate 0.0002 and Beta1 = 0.5. For keeping track of the generator’s learning progression
+
+## Train the Discriminator:
+Practically, we want to maximize log(D(x))+log(1−D(G(z))). Due to the separate mini-batch.we will calculate this in two steps. First, we will construct a batch of real samples from the training set, forward pass through D, calculate the loss (log(D(x))), then calculate the gradients in a backward pass. Secondly, we will construct a batch of fake samples with the current generator, forward pass this batch through D, calculate the loss (log(1−D(G(z)))), and accumulate the gradients with a backward pass
  
 
 
