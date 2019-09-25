@@ -13,3 +13,12 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
      
 ## DC GAN :
 - A DCGAN is a direct extension of the GAN described above, except that it explicitly uses convolutional and convolutional-transpose layers in the discriminator and generator
+- The discriminator is made up of strided
+                           - convolution layers
+                           - batch norm layers
+                           - LeakyReLU activations.
+                
+## convolution layers : 
+- torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0,      dilation=1, groups=1, bias=True, padding_mode='zeros')
+               - stride: controls the stride for the cross-correlation, a single number or a tuple.
+               - padding: controls the amount of implicit zero-paddings on both sides for padding number of points for each dimension.
