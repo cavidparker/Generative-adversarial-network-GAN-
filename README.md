@@ -28,4 +28,11 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
 - Applies Batch Normalization over a 4D input (a mini-batch of 2D inputs with additional channel dimension)
  
                - torch.nn.BatchNorm2d(num_features, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+               - num_features: CCC from an expected input of size (N,C,H,W)(N, C, H, W)(N,C,H,W)
+               - eps: a value added to the denominator for numerical stability. Default: 1e-5
+               - momentum: the value used for the running_mean and running_var computation. Can be set to None for cumulative moving average (i.e. simple average). Default: 0.1
+               - affine: a boolean value that when set to True, this module has learnable affine parameters. Default: True
+               - track_running_stats: a boolean value that when set to True, this module tracks the running mean and variance, and when set to False, this module does not track such statistics and always uses batch statistics in both training and eval modes. Default: True
+
+
                
