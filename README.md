@@ -9,3 +9,7 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
                         - minGmaxDV(D,G)=Ex∼pdata(x)[logD(x)]+Ez∼pz(z)[log(1−D(G(z)))]
                         - lassifies reals and fakes (logD(x))
                         - D will predict its outputs are fake (log(1−D(G(x))))
+      
+     
+## DC GAN :
+- A DCGAN is a direct extension of the GAN described above, except that it explicitly uses convolutional and convolutional-transpose layers in the discriminator and generator
