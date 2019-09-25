@@ -34,6 +34,14 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
                - momentum: the value used for the running_mean and running_var computation. Can be set to None for cumulative moving average (i.e. simple average). Default: 0.1
                - affine: a boolean value that when set to True, this module has learnable affine parameters. Default: True
                - track_running_stats: a boolean value that when set to True, this module tracks the running mean and variance, and when set to False, this module does not track such statistics and always uses batch statistics in both training and eval modes. Default: True
+               
+## LeakyReLU:
+- torch.nn.LeakyReLU(negative_slope=0.01, inplace=False)
+                        
+                - LeakyReLU(x)=max(0,x)+negative_slope∗min(0,x)
+                - negative_slope – Controls the angle of the negative slope. Default: 1e-2
+                - inplace – can optionally do the operation in-place. Default: False
+
 
 
                
