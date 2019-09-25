@@ -14,6 +14,7 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
 ## DC GAN :
 - A DCGAN is a direct extension of the GAN described above, except that it explicitly uses convolutional and convolutional-transpose layers in the discriminator and generator
 - The discriminator is made up of strided
+
                            - convolution layers
                            - batch norm layers
                            - LeakyReLU activations.
