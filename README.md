@@ -24,7 +24,8 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
                - stride: controls the stride for the cross-correlation, a single number or a tuple.
                - padding: controls the amount of implicit zero-paddings on both sides for padding number of points for each dimension.
                
-## BatchNorm2d : Applies Batch Normalization over a 4D input (a mini-batch of 2D inputs with additional channel dimension)
+## BatchNorm2d : 
+- Applies Batch Normalization over a 4D input (a mini-batch of 2D inputs with additional channel dimension)
  
                - torch.nn.BatchNorm2d(num_features, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
                
