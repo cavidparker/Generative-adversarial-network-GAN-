@@ -55,6 +55,9 @@ this is accomplished through a series of strided two dimensional convolutional t
                -  nz = is the length of the z input vector
                - ngf = ngf is relates to the size of the feature maps that are propagated through the generator
                - nc = nc is the number of channels in the output image 
+               
+## Discriminator:
+Discriminator takes a 3x64x64 input image, processes it through a series of Conv2d, BatchNorm2d, and LeakyReLU layers, and outputs the final probability through a Sigmoid activation function. This architecture can be extended with more layers if necessary for the problem, but there is significance to the use of the strided convolution, BatchNorm, and LeakyReLUs. The DCGAN paper mentions it is a good practice to use strided convolution rather than pooling to downsample because it lets the network learn its own pooling function. 
  
 
 
