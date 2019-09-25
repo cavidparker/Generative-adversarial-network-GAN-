@@ -29,6 +29,7 @@ The main focus for GAN (Generative Adversarial Networks) is to generate data fro
 - Batch Nor-malization allows us to use much higher learning rates andbe less careful about initialization.
 - Applies Batch Normalization over a 4D input (a mini-batch of 2D inputs with additional channel dimension)
 - torch.nn.BatchNorm2d(num_features, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+- The DCGAN paper uses a batch size of 128 
  
                
                - num_features: CCC from an expected input of size (N,C,H,W)(N, C, H, W)(N,C,H,W)
